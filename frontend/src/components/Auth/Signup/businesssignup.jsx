@@ -2,8 +2,11 @@ import { useState } from "react";
 import axios from 'axios';
 import "./businesssignup.scss";
 import logo from "../../../assets/images/logo_name.svg";
+import { useNavigate} from 'react-router-dom'
 
 const BusinessSignup = () => {
+   
+  const history = useNavigate();
   const check = () => {
     let pass = document.getElementById("business_signup_pass").value;
     let confirm = document.getElementById("business_signup_confirm").value;
@@ -43,6 +46,10 @@ const BusinessSignup = () => {
         requestBody
       );
       console.log("Response:", response.data);
+      if (response.status === 200) {
+        // Navigate to /login when response status is 200
+        history("/businesslogin");
+      }
       // Handle successful response here
     } catch (error) {
       console.error("Error:", error);

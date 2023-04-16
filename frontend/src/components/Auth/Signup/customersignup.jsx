@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate} from 'react-router-dom'
+import { useNavigate} from 'react-router-dom';
 import "./customersignup.scss";
 import logo from "../../../assets/images/logo_name.svg";
 import girls from "../../../assets/images/woman.svg";

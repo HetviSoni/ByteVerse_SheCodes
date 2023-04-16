@@ -24,7 +24,7 @@ const BusinessLogin = () => {
         console.log(response.data)
         if(response.data.status==='Success!')
         {
-          history('/customer-homepage')
+          history('/build-profile')
         }
         // Redirect to dashboard or perform other actions upon successful login
       })
