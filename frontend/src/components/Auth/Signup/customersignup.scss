@@ -4,7 +4,7 @@
   background-color: #f0ecf9;
   display: flex;
   justify-content: space-evenly;
-
+  overflow: hidden;
   &_text {
     height: 100%;
     width: 50%;
@@ -76,4 +76,111 @@
   border: 1px solid rgba(0, 0, 0, 0.32);
   border-radius: 10px;
   padding: 0.5em;
+}
+
+@media screen and (max-width: 768px) {
+  img {
+    width: 100%;
+    height: 100%;
+  }
+  .customersignup {
+    height: 100vh;
+    width: 100vw;
+    font-size: 3vw;
+
+    &_text {
+      height: 100%;
+      width: 70%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+
+      &_logo {
+        height: 20%;
+        width: 70%;
+        margin-bottom: 1.6em;
+      }
+      &_content {
+        width: 80%;
+        height: 100%;
+        &_form {
+          margin-top: 1.6em;
+          height: 60%;
+          width: 70%;
+          font-size: 16px;
+        }
+        &_submit {
+          height: 9%;
+          width: 70%;
+          font-size: 20px;
+        }
+        &_login {
+          height: 10%;
+          width: 70%;
+          font-size: 2vw;
+        }
+      }
+    }
+    &_img {
+      display: none;
+    }
+  }
+  #customer_signup_input,
+  #customer_signup_pass,
+  #customer_signup_confirm {
+    height: 10%;
+    border-radius: 5px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  img {
+    width: 100%;
+    height: 100%;
+  }
+  .customersignup {
+    height: 100vh;
+    width: 100vw;
+    font-size: 5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &_text {
+      height: 100%;
+      width: 100%;
+      &_logo {
+        height: 20%;
+        width: 80%;
+      }
+      &_content {
+        width: 80%;
+        height: 80%;
+        &_form {
+          height: 50%;
+          width: 70%;
+          font-size: 16px;
+        }
+        &_submit {
+          height: 9%;
+          width: 70%;
+          font-size: 4vw;
+        }
+        &_login {
+          height: 10%;
+          width: 70%;
+          font-size: 3vw;
+        }
+      }
+    }
+    &_img {
+      display: none;
+    }
+  }
+  #customer_signup_input,
+  #customer_signup_pass,
+  #customer_signup_confirm {
+    border-radius: 5px;
+  }
 }

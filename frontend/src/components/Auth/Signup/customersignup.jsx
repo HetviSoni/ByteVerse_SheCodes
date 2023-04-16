@@ -1,83 +1,153 @@
-import { Link } from "react-router-dom";
+import axios from "../axios";
 import { useState } from "react";
-
+import { useNavigate} from 'react-router-dom'
 import "./customersignup.scss";
 import logo from "../../../assets/images/logo_name.svg";
 import girls from "../../../assets/images/woman.svg";
+// import OTPComponent from "./otp";
+
+const signup_url = "/api/accounts/register/";
 
 const CustomerSignup = () => {
-  const [passwordConfirm, setPasswordConfirm] = useState("false");
+ 
+  const history = useNavigate();
+  
+  const [formData, setFormData] = useState({
+    email: "",
+    first_name:"",
+    last_name:"",
+    contact_no:"",
+    location:"",
+    is_business: false,
+    is_customer: true,
+    password: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    // Convert is_business and is_customer to boolean values
+    const { email, first_name, last_name, contact_no,location, password, is_business, is_customer } = formData;
+    const requestBody = {
+      email,
+      first_name,
+      last_name,
+      contact_no,
+      location,
+      password,
+      is_business:"false",
+      is_customer: "true"
+    };
+
+    try {
+      const response = await axios.post(
+        "https://udaan.pythonanywhere.com/api/accounts/register/",
+        requestBody
+      );
+      if (response.status === 200) {
+        // Navigate to /login when response status is 200
+        history("/customerlogin");
+      }
+      console.log("Response:", response.data);
+      // Handle successful response here
+    } catch (error) {
+      console.error("Error:", error);
+      // Handle error here
+    }
+  };
+
   const check = () => {
     const pass = document.getElementById("customer_signup_pass").value;
     const confirm_pass = document.getElementById(
       "customer_signup_confirm"
     ).value;
     if (pass === confirm_pass) {
-      setPasswordConfirm("true");
-      document.getElementById("message").style.color = "green";
-      document.getElementById("message").innerHTML = "passwords match";
+      document.getElementById("submit").style.backgroundColor = "#6e68e3";
     } else {
-      document.getElementById("message").style.color = "red";
-      document.getElementById("message").innerHTML = "password not matched";
+      document.getElementById("submit").style.backgroundColor = "#d3d3d3";
     }
   };
   return (
-    <div className="customersignup">
-      <div className="customersignup_text">
-        <div className="customersignup_text_logo">
-          <img src={logo} alt="logo" />
-        </div>
-        <div className="customersignup_text_content">
-          <div className="customersignup_text_content_title">Signup</div>
-          <div className="customersignup_text_content_form">
-            <input type="text" placeholder="Email" id="customer_signup_input" />
-            <input
-              type="text"
-              placeholder="First Name"
-              id="customer_signup_input"
-            />
-            <input
-              type="text"
-              placeholder="Last Name"
-              id="customer_signup_input"
-            />
+    <>
+      {/* {otp === "true" ? (
+        <OTPComponent mail={mail} />
+      ) : ( */}
+        <div className="customersignup">
+          <div className="customersignup_text">
+            <div className="customersignup_text_logo">
+              <img src={logo} alt="logo" />
+            </div>
+            <div className="customersignup_text_content">
+              <div className="customersignup_text_content_title">Signup</div>
+              <div className="customersignup_text_content_form">
+                <input
+                  type="text"
+                  placeholder="Email"
+                  id="customer_signup_input"
+                  name="email"
+                  onChange={handleChange}
+                />
+                <input
+                  type="text"
+                  placeholder="First Name"
+                  id="customer_signup_input"
+                  name="first_name"
+                  onChange={handleChange}
+                />
+                <input
+                  type="text"
+                  placeholder="Last Name"
+                  id="customer_signup_input"
+                  name="last_name"
+                  onChange={handleChange}
+                />
 
-            <input
-              type="type"
-              placeholder="Phone Number"
-              id="customer_signup_input"
-            />
-            <input
-              type="text"
-              placeholder="Password"
-              id="customer_signup_pass"
-              onKeyUp={check}
-            />
-            <input
-              type="password"
-              id="customer_signup_confirm"
-              placeholder="Confirm password"
-              onKeyUp={check}
-            />
-            <span id="message"></span>
-          </div>
-          <div className="customersignup_text_content_submit">
-            <input type="button" value="Signup" id="customer_login_submit" />
-          </div>
-          <div className="customersignup_text_content_signup">
-            <div className="customersignup_text_content_signup_text">
-              Already have an account?
+                <input
+                  type="type"
+                  placeholder="Phone Number"
+                  id="customer_signup_input"
+                  name="contact_no"
+                  onChange={handleChange}
+                />
+                <input
+                  type="password"
+                  placeholder="Password"
+                  id="customer_signup_pass"
+                  name="password"
+                  onKeyUp={check}
+                  onChange={handleChange}
+                />
+                <input
+                  type="password"
+                  id="customer_signup_confirm"
+                  placeholder="Confirm password"
+                  onKeyUp={check}
+                />
+              </div>
+              <div className="customersignup_text_content_submit">
+                <input
+                  type="button"
+                  value="Signup"
+                  id="submit"
+                  onClick={handleSubmit}
+                />
+              </div>
+              <div className="customersignup_text_content_login">
+                Already have an account? <a href="/customerlogin">Login</a>
+              </div>
             </div>
-            <div className="customersignup_text_content_signup_link">
-              <Link to="/customerlogin">Login</Link>
-            </div>
+          </div>
+          <div className="customersignup_img">
+            <img src={girls} alt="woman_img" height="100%" />
           </div>
         </div>
-      </div>
-      <div className="customersignup_img">
-        <img src={girls} alt="woman_img" height="100%" />
-      </div>
-    </div>
+      {/* )} */}
+    </>
   );
 };
 export default CustomerSignup;

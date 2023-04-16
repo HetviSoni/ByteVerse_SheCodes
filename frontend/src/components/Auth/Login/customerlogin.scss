@@ -4,7 +4,7 @@
   background-color: #f0ecf9;
   display: flex;
   justify-content: space-evenly;
-
+  overflow: hidden;
   &_text {
     height: 100%;
     width: 50%;
@@ -74,10 +74,104 @@
   border-radius: 10px;
   padding: 0.5em;
 }
-#customer_login_submit {
+#submit {
   color: #ffffff;
 }
 a {
   text-decoration: none;
   color: #000;
+}
+
+@media screen and (max-width: 768px) {
+  img {
+    width: 100%;
+    height: 100%;
+  }
+  .customerlogin {
+    height: 100vh;
+    width: 100vw;
+    font-size: 3vw;
+
+    &_text {
+      height: 100%;
+      width: 70%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+
+      &_logo {
+        height: 20%;
+        width: 70%;
+        margin-bottom: 1.6em;
+      }
+      &_content {
+        width: 80%;
+        height: 50%;
+        &_form {
+          height: 30%;
+          width: 70%;
+          font-size: 16px;
+        }
+        &_submit {
+          height: 15%;
+          width: 70%;
+          font-size: 20px;
+        }
+        &_signup {
+          height: 10%;
+          width: 70%;
+          font-size: 2vw;
+        }
+      }
+    }
+    &_img {
+      display: none;
+    }
+  }
+  #customer_login_input,
+  #customer_login_pass,
+  #customer_login_confirm {
+    height: 30%;
+    width: 100%;
+    border-radius: 5px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  img {
+    width: 100%;
+    height: 100%;
+  }
+  .customerlogin {
+    height: 100vh;
+    width: 100vw;
+    font-size: 5vw;
+
+    &_text {
+      height: 100%;
+      width: 100%;
+      &_logo {
+        height: 20%;
+        width: 80%;
+      }
+      &_content {
+        width: 70%;
+        height: 60%;
+        &_form {
+          height: 30%;
+          width: 70%;
+        }
+        &_submit {
+          width: 70%;
+        }
+        &_signup {
+          width: 70%;
+          font-size: 3vw;
+        }
+      }
+    }
+    &_img {
+      display: none;
+    }
+  }
 }
