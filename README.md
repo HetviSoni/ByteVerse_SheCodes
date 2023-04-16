@@ -13,7 +13,7 @@ This is a platform created for women artisans to showcase their skills and get e
 
 ## Installation
 This is the frontend for our project.
-backend can be found at https://github.com/vranda25/udaan .
+backend can be found at https://github.com/vranda25/ByteVerse_SheCodes
 To run this project on your local machine, follow the below steps:
 
 1. Clone the repository
