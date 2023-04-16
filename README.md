@@ -55,7 +55,7 @@ npm start
 
 ## Screenshots
 
-![udaan](https://user-images.githubusercontent.com/76479104/230737938-f1a38e08-073d-4b28-a369-8b2c71b2a172.png)
+<img width="959" alt="image" src="https://user-images.githubusercontent.com/76479104/232315799-ed6c4a24-c836-4354-827a-c49e9f009562.png">
 
 ## Technologies Used
 
