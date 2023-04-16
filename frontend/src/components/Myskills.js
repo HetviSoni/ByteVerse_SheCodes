@@ -2,18 +2,10 @@ import React from 'react'
 import Skillbox from './Skillbox'
 
 const Myskills = () => {
-   let skills=[{skill_name:"Mahendi",
-   skill_description:"I love Mahendi from my childhood always wanted to a painter",
-   skill_image:"https://media.weddingz.in/images/20200328003801/Intricate-Mehendi-1.png",
-   remuneration:"500"},
-   {skill_name:"Mahendi",
-   skill_description:"I love Mahendi from my childhood always wanted to a painter",
-   skill_image:"https://media.weddingz.in/images/20200328003801/Intricate-Mehendi-1.png",
-   remuneration:"500"},
-   {skill_name:"Mahendi",
-   skill_description:"I love Mahendi from my childhood always wanted to a painter",
-   skill_image:"https://media.weddingz.in/images/20200328003801/Intricate-Mehendi-1.png",
-   remuneration:"500"}];
+   let skills =[{
+    skill_name:"Wall Art", skill_description:"Creating amazing nature inspired wall arts", skill_image:"https://assets.ajio.com/medias/sys_master/root/20220618/bDX0/62acf0b5aeb26921af3968c2/-473Wx593H-464510063-multi-MODEL.jpg" ,remuneration:"4500-6000 INR"
+  }]
+
   return (
     <div style={{backgroundColor:'#faf9f7'}}>
         <h2 className='mx-3' style={{color:'#6E68E3'}}>My skills</h2>

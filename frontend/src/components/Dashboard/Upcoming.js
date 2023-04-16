@@ -2,27 +2,20 @@ import React from 'react'
 import UpcomingJob from './UpcomingJob';
 
 const Upcoming = (props) => {
-   let upcoming=[{
-   customer_name:"Vranda",
-   contact_no:'6261044348',
-   time:'3:00 pm',
-   date_requested:"23-04-2023",
-   job_description:"I have a function today at my house. I have to get wax and facial urgently."
-    },
-    {
-        customer_name:"Vranda",
-        contact_no:'6261044348',
-        time:'3:00 pm',
-        date_requested:"23-04-2023",
-        job_description:"I have a function today at my house. I have to get wax and facial urgently."
-         },
-    {
-            customer_name:"Vranda",
-            contact_no:'6261044348',
-            time:'3:00 pm',
-            date_requested:"23-04-2023",
-            job_description:"I have a function today at my house. I have to get wax and facial urgently."
-         }];
+  let upcoming=[{
+    customer_name:"Sapna",
+    contact_no:'7392999208',
+    time:'3:00 pm',
+    date_requested:"18-04-2023",
+    job_description:"I want to renovate my house. "
+     },
+     {
+         customer_name:"Vranda",
+         contact_no:'9993922011',
+         time:'3:00 pm',
+         date_requested:"23-04-2023",
+         job_description:"I have a function today at my house. I have to get a wall painting urgently."
+          }];
   return (
     <div style={{backgroundColor:'#faf9f7'}}>
       <br/>
