@@ -61,6 +61,15 @@ const CustomerHomePage = () => {
             skills={item.skill}
           />
         ))}
+        {/* {data.map(item => (
+          <BusinessCard
+            key={item.id}
+            name={item.first_name}
+            rating={item.rating}
+            jobs_completed={item.jobs_completed}
+            skills={item.skill}
+          />
+        ))} */}
       </div>
     </>
 

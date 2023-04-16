@@ -16,8 +16,8 @@ const CustomerDashboard = () => {
                     <div className="request-box">
                         <h3>Requests Completed</h3>
                         <div className="request-card">
-                            <div><span>Hetvi Soni</span><span>Job:</span> </div>
-                            <div><span>Date:</span><span>Time:</span> </div>
+                            <div><span>Preeti</span><span>Job:Nail Art</span> </div>
+                            <div><span>Date:12-04-2024</span><span>Time:10:00pm</span> </div>
                         </div>
                     </div>
                 </div>

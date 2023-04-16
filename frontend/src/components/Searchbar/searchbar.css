@@ -1,0 +1,24 @@
+.searchbar{
+  border-radius: 2px;
+  width: 71%;
+  display: flex;
+  justify-content: space-between;
+}
+.input{
+   width:100% ;
+   height: 2.5rem;
+   border: 1px solid grey;
+}  
+.search{
+    background-color: #6E68E3;
+    border: 2px solid #6E68E3;
+    border-radius: 2px;
+}
+.search i{
+    color: white;
+
+}
+.links i{
+  margin-right: 5px;
+  color:#6E68E3 ;
+}

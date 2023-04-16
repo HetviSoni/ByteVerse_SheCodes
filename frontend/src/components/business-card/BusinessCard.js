@@ -1,6 +1,7 @@
 import './businesscard.css';
-
+import { useNavigate } from "react-router-dom";
 const BusinessCard = (props) => {
+    const history = useNavigate();
     return (
         
         <div className="business-card">
@@ -16,7 +17,7 @@ const BusinessCard = (props) => {
                 {props.skills.map((skill, index) => (
                     <span key={index}>{skill}</span>
                 ))}
-            </div> <span >View details <i class="fa-solid fa-angle-right"></i></span> </div>
+            </div> <span onClick={()=>history('/worker-profile')} >View details <i class="fa-solid fa-angle-right"></i></span> </div>
         </div>
     )
 }
