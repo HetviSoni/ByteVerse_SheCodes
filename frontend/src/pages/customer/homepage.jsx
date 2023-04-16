@@ -1,11 +1,8 @@
-import SearchBar from "../../components/Searchbar/Searchbar";
 import BusinessCard from "../../components/business-card/BusinessCard";
-import Navbar from "../../components/Navbar";
+import CustomerNavbar from "../../components/customer-navbar/CustomerNavbar";
 import { useState, useEffect } from "react";
 import './homepage.css';
 const CustomerHomePage = () => {
-
-  const [businessProfiles, setBusinessProfiles] = useState([]);
   const [data, setData] = useState([]);
   const [query, setQuery] = useState('');
 
@@ -48,7 +45,7 @@ const CustomerHomePage = () => {
  
   return (
     <>
-      <Navbar />
+      <CustomerNavbar goto="dashboard"/>
       <div className="customer-home">
         {/* <SearchBar  onSearch={handleSearch} />  */}
         <form className="searchbar" onSubmit={handleSubmit}>
@@ -64,15 +61,6 @@ const CustomerHomePage = () => {
             skills={item.skill}
           />
         ))}
-        {/* {data.map(item => (
-          <BusinessCard
-            key={item.id}
-            name={item.first_name}
-            rating={item.rating}
-            jobs_completed={item.jobs_completed}
-            skills={item.skill}
-          />
-        ))} */}
       </div>
     </>
 

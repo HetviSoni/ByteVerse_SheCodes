@@ -72,6 +72,7 @@
   background-color: #6e68e3;
   color: white;
   border-radius: 0.3em;
+  cursor: pointer;
 }
 
 #signup_landing {
@@ -81,14 +82,19 @@
   background-color: #6e68e3;
   color: white;
   border-radius: 0.3em;
+  cursor: pointer;
 }
-
+#drop_1{
+  background-color: grey;
+}
 #menu_1 {
   position: absolute;
+  // background-color: grey;
 }
 #menu_2 {
   position: absolute;
   top: 130px;
+  
 }
 
 #login_dropdown {

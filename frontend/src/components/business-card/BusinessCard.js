@@ -1,8 +1,6 @@
 import './businesscard.css';
-import { useNavigate } from "react-router-dom";
 
 const BusinessCard = (props) => {
-    const history = useNavigate();
     return (
         
         <div className="business-card">

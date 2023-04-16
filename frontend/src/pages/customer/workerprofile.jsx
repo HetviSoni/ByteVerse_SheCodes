@@ -25,7 +25,7 @@ const WorkerProfile = (props) => {
                 <div className="dp"><img src={profile}></img></div>
                 <div className="description">
                     <div className="worker-name">
-                        {props.name}
+                        Purnima Patel
                     </div>
                     <div className="links">
                         <i class="fa-brands fa-instagram fa-2x" ></i>

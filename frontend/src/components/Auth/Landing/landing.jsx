@@ -27,7 +27,7 @@ const Landing = () => {
 
             {login ? (
               <div>
-                <div id="menu_1">Business</div>
+                <div id="menu_1"><Link to="/businesslogin">Business</Link></div>
                 <div id="menu_2">
                   <Link to="/customerlogin">Customer</Link>
                 </div>
@@ -44,9 +44,9 @@ const Landing = () => {
               }}
             />
             {signup ? (
-              <div>
-                <div id="menu_1">Business</div>
-                <div id="menu_2">Customer</div>
+              <div id="drop_1">
+                <div id="menu_1"><Link to="/businesssignup">Business</Link></div>
+                <div id="menu_2"><Link to="/customersignup">Customer</Link></div>
               </div>
             ) : null}
           </div>

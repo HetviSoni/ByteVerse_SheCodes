@@ -1,12 +1,9 @@
-import axios from "../axios";
 import { useState } from "react";
 import { useNavigate} from 'react-router-dom'
 import "./customersignup.scss";
 import logo from "../../../assets/images/logo_name.svg";
 import girls from "../../../assets/images/woman.svg";
-// import OTPComponent from "./otp";
-
-const signup_url = "/api/accounts/register/";
+import axios from 'axios';
 
 const CustomerSignup = () => {
  
@@ -32,7 +29,7 @@ const CustomerSignup = () => {
     e.preventDefault();
 
     // Convert is_business and is_customer to boolean values
-    const { email, first_name, last_name, contact_no,location, password, is_business, is_customer } = formData;
+    const { email, first_name, last_name, contact_no,location, password} = formData;
     const requestBody = {
       email,
       first_name,
@@ -74,9 +71,6 @@ const CustomerSignup = () => {
   };
   return (
     <>
-      {/* {otp === "true" ? (
-        <OTPComponent mail={mail} />
-      ) : ( */}
         <div className="customersignup">
           <div className="customersignup_text">
             <div className="customersignup_text_logo">
@@ -146,7 +140,6 @@ const CustomerSignup = () => {
             <img src={girls} alt="woman_img" height="100%" />
           </div>
         </div>
-      {/* )} */}
     </>
   );
 };

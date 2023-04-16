@@ -1,18 +1,15 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import axios from "../axios";
-
 import "./customerlogin.scss";
 import girls from "../../../assets/images/woman.svg";
 import logo from "../../../assets/images/logo_name.svg";
-
-const login_url = "/api/accounts/login/";
+import axios from 'axios';
 
 const Customerlogin = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [accessToken, setAccessToken] = useState('');
-  const [error, setError] = useState('');
+  // const [error, setError] = useState('');
   const history = useNavigate();
   const handleLogin = () => {
     // Send login request to Django backend
@@ -30,10 +27,10 @@ const Customerlogin = () => {
         }
         // Redirect to dashboard or perform other actions upon successful login
       })
-      .catch(error => {
-        // Handle login error
-        setError('Invalid email or password');
-      });
+      // .catch(error => {
+      //   // Handle login error
+      //   setError('Invalid email or password');
+      // });
   }
 
   return (
