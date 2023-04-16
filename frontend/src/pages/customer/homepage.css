@@ -1,0 +1,9 @@
+.customer-home{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 2rem;
+    /* background-color: #F0ECF9; */
+    background-color:#faf9f7;
+}

@@ -1,24 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Landing from "./components/Auth/Landing/landing";
+import Customerlogin from "./components/Auth/Login/customerlogin";
+import Customersignup from "./components/Auth/Signup/customersignup";
+import BusinessLogin from "./components/Auth/Login/businesslogin";
+import BusinessSignup from "./components/Auth/Signup/businesssignup";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Router>
+        <Routes>
+          <Route exact path="/" caseSensitive={false} element={<Landing />} />
+          <Route
+            path="/customerlogin"
+            caseSensitive={false}
+            element={<Customerlogin />}
+          />
+          <Route
+            path="/customersignup"
+            caseSensitive={false}
+            element={<Customersignup />}
+          />
+          <Route
+            path="/businesslogin"
+            caseSensitive={false}
+            element={<BusinessLogin />}
+          />
+          <Route
+            path="/businesssignup"
+            caseSensitive={false}
+            element={<BusinessSignup />}
+          />
+        </Routes>
+      </Router>
+    </>
   );
 }
 

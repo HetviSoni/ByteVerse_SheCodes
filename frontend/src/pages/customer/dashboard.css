@@ -1,0 +1,20 @@
+.customer-dashboard{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    /* border: 2px solid green; */
+}
+.dashboard-left{
+
+    /* border: 2px solid violet; */
+    width: 100%;
+}
+.dashboard-right{
+    /* border: 2px solid violet; */
+    width: 100%;
+}
+@media only screen and (max-width: 720px){
+    .customer-dashboard{
+        flex-direction: column;
+    }
+}
