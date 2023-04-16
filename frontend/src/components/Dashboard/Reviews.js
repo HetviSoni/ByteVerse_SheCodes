@@ -1,21 +1,22 @@
 import React from 'react'
 import Feedbcak from './Feedbcak';
 const Reviews = () => {
-    let reviews=[{
-        customer_name:'Hetvi',
-        rating:'3',
-        comment:'didn\'t quite like it'
-    },
-    {
-        customer_name:'Hetvi',
-        rating:'3',
-        comment:'didn\'t quite like it'
-    },
-    {
-        customer_name:'Hetvi',
-        rating:'3',
-        comment:'didn\'t quite like it'
-    }]
+  let reviews=[{
+    customer_name:'Hetvi',
+    rating:'4',
+    comment:'didn\'t quite like it'
+},
+{
+    customer_name:'somya',
+    rating:'5',
+    comment:'I loved your work so much. will definately reccomend u to a friend :)'
+},
+{
+    customer_name:'Harshi',
+    rating:'5',
+    comment:'Amazing experience'
+}]
+
   return (
     <div className='mx-3'>
       <br/>

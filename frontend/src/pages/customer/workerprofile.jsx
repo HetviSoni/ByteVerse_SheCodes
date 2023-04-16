@@ -22,7 +22,7 @@ const WorkerProfile = (props) => {
     return (
         <div className="workerprofile">
             <div className="info">
-                <div className="dp"><img src={profile}></img></div>
+                <div className="dp"><img src={profile} alt="profile im"></img></div>
                 <div className="description">
                     <div className="worker-name">
                         Purnima Patel

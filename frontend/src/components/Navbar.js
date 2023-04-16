@@ -21,15 +21,13 @@ const Navbar = () => {
           <a className="nav-link active" aria-current="page" href="/">Home</a>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="/">Link</a>
+          <a className="nav-link" href="/">About</a>
         </li>
         
-        <li className="nav-item">
-          <a href="/" className="nav-link disabled">Disabled</a>
-        </li>
+        
       </ul>
         
-        <button className="btn btn-outline-success" type="submit">Search</button>
+        
       </div>
 
     

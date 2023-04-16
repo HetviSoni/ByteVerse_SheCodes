@@ -1,20 +1,20 @@
 import React from 'react'
 import CompletedJob from './CompletedJob'
 const Completed = () => {
-    let completed=[{
-        customer_name:'somya',
-        job_date:'23/2/2023 ',
-        contact_no:'6261044348',
-        rating:'5',
-        comment:'I loved your work so much. will definately reccomend u to a friend :)'
-    },
-    {
-        customer_name:'somya',
-        job_date:'23/2/2023 ',
-        contact_no:'6261044348',
-        rating:'5',
-        comment:'I loved your work so much. will definately reccomend u to a friend :)'
-    }];
+  let completed=[{
+    customer_name:'somya',
+    job_date:'23/2/2023 ',
+    contact_no:'6261044348',
+    rating:'5',
+    comment:'I loved your work so much. will definately reccomend u to a friend :)'
+},
+{
+    customer_name:'hetvi',
+    job_date:'15/2/2023 ',
+    contact_no:'7392999208',
+    rating:'4',
+    comment:'Didn\'t quite like it:('
+}];
   return (
     <div>
       
